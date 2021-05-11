@@ -1,0 +1,3 @@
+1.mistake in import rotues from routes.js file 
+so learn concept of export and exposrt defalut difference in js
+2.
