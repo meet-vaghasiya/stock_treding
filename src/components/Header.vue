@@ -1,15 +1,46 @@
 <template>
-    <div>
-<h1>header component</h1>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <router-link class="navbar-brand" to="/">Stock Trader</router-link>
+      </div>
+      <!-- </div> -->
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav mx-auto">
+          <router-link to="/portfolio" activeClass="active" tag="li"
+            ><a>Portfolio</a></router-link
+          >
+          <router-link to="/stocks" activeClass="active" tag="li"
+            ><a>Stocks</a></router-link
+          >
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">End day</a></li>
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Save & Load</a
+            >
+          </li>
+
+          <ul class="dropdown-menu">
+            <li><a href="#">Save Data</a></li>
+            <li><a href="#">Load Data</a></li>
+          </ul>
+        </ul>
+      </div>
     </div>
+  </nav>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
 
-<style  scoped>
-
-</style>
+<style scoped></style>
