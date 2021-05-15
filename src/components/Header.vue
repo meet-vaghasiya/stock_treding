@@ -15,8 +15,11 @@
             ><a>Stocks</a></router-link
           >
         </ul>
+        <strong class="navbar-text navbar-right">
+          Funds: {{ funds | currency }}
+        </strong>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">End day</a></li>
+          <li><a href="#" @click="endDay">End day</a></li>
           <li class="dropdown">
             <a
               href="#"
@@ -40,7 +43,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    funds() {
+      return this.$store.getters.funds;
+    },
+  },
+  methods: {
+    endDay() {
+      this.$store.dispatch("randomizeStock");
+    },
+  },
+};
 </script>
 
 <style scoped></style>
