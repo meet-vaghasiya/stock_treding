@@ -23,7 +23,6 @@ export default {
   computed: {
     stocks() {
       // alert("hello world");
-      console.log(this.$store.getters.stocks, "console.app");
       return this.$store.getters.stocks;
     },
   },
